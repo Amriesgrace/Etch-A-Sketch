@@ -57,29 +57,18 @@ function getrandomColor (){
     for( let i = 0; i < 6; i++){
         color += letters[Math.floor(Math.random() * 16)];
     }
-    //console.log(color)
-    
-    return color;
-    
-    for(let i =0; i < newGrid.length; i++){
-        newGrid[i].addEventListener('mouseover', ()=>{
-            this.style.background = color;
-        })
-    }
+    this.style.background = color;
 
 }
 //getrandomColor();
 function setRandomColorBg() {
-    //var newGrid = document.getElementsByClassName('grid');
+    var newGrid = document.getElementsByClassName('grid');
     randomColor.addEventListener('click', ()=>{
         console.log('you click')
-        getrandomColor();
-        /* for(let i =0; i < newGrid.length; i++){
-            newGrid[i].addEventListener('mouseover', ()=>{
-               console.log( getrandomColor());
-               this.style.background = getrandomColor();
-            })
-        } */
+        //getrandomColor();
+        for(let i =0; i < newGrid.length; i++){
+            newGrid[i].addEventListener('mouseover', getrandomColor)
+        }
     })
 };
 setRandomColorBg();

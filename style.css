@@ -46,3 +46,32 @@ body{
     flex-direction: row;
     border: 1px solid #000;
 }
+
+@media screen and (max-width: 320px){
+    .btn{
+        width:220px;
+        font-size: 14px;
+    }
+    .form-control{
+        widows: 240px;
+        margin-bottom:10px;
+        font-size: 15px;
+    }
+    .controls{
+        margin: 0 2em;
+    }
+    .container{
+        width: 320px;
+    }
+}
+@media screen and (max-width: 400px){
+    .btn{
+        width: 150px;
+        font-size: 14px;
+    }
+    .container{
+        width:400px;
+    }
+}
+
+
