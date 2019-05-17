@@ -26,9 +26,7 @@ const createInitialGrid = (size)=>{
 
 window.addEventListener("load", (createInitialGrid(12)) );
 
-//black hover
 function blackBg  () {
-    //console.log(this)
     this.style.background = "#000";
     this.style.borderColor = "#fff";
     this.style.borderWidth = "thin";
@@ -37,11 +35,9 @@ function blackBg  () {
 // changes gridsize to size of users choice
 function resetGrid (){    
     gridInput.addEventListener('blur', (e)=>{
-        //console.log(e);
         changeGrid.addEventListener('click', (event)=>{
             console.log(e.target.value);
             let sizeVal = e.target.value;
-            //size = sizeVal;
             container.innerHTML = "";
             createInitialGrid(sizeVal);
         })
@@ -65,7 +61,6 @@ function setRandomColorBg() {
     var newGrid = document.getElementsByClassName('grid');
     randomColor.addEventListener('click', ()=>{
         console.log('you click')
-        //getrandomColor();
         for(let i =0; i < newGrid.length; i++){
             newGrid[i].addEventListener('mouseover', getrandomColor)
         }
